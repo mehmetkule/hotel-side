@@ -87,6 +87,9 @@ img {
   color: var(--warning);
 }
 
+.brand{
+  cursor: pointer;
+}
 /*header*/
 
 .main-header {
@@ -96,6 +99,11 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.main-header.blog{
+  background-image: url(../img/bg-2.jpeg);
+  height: 50vh;
 }
 
 .main-header .content {
@@ -183,10 +191,6 @@ img {
   margin-top: -10px;
 }
 
-/*teams*/
-.teams img {
-}
-
 .teams img:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -224,6 +228,15 @@ img {
   font-size: 4rem;
 }
 
+.articles{
+  padding: 3rem 5rem;
+}
+
+.article{
+  margin-top: 1.5rem;
+  color: #fff;
+}
+
 .footer{
   display: flex;
   flex-direction: column;
@@ -258,14 +271,23 @@ img {
   color: #0077b5;
 }
 /*media query*/
-@media screen and (max-width: 767px) {
-  .main-header .content h1 {
-    margin-top: 5rem;
-    font-size: 2.5rem;
+
+@media screen and (max-width:767px) {
+  html{
+    font-size: 9px;
+  }
+  .navbar{
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
   }
 
-  .main-header .content p {
-    font-size: 1.6rem;
-    padding: 0 15px;
+  .navbar a {
+    margin: 0 3px;
+    padding: 10px;
+  }
+
+  .teams img{
+    width: 70%;
   }
 }
